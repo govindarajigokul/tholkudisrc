@@ -7,9 +7,9 @@
            routerLink="/home"
            [attr.aria-label]="'home.title' | translate">
           <img
-            src="assets/images/tholkudi-logo-english.png"
+            [src]="currentLogo?.src || 'assets/images/tholkudi-logo-english.png'"
             class="footer-logo"
-            [attr.alt]="'menu.header.image.logo' | translate" />
+            [attr.alt]="currentLogo?.alt || ('menu.header.image.logo' | translate)" />
         </a>
       </div>
 
