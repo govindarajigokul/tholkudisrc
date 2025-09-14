@@ -1,9 +1,132 @@
-// temporary fix for bootstrap 4 beta btn color issue
-.btn-secondary {
-  background-color: var(--bs-input-bg);
-  color: var(--bs-input-color);
+// Search form styles for pill-shaped design
+.search-form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.search-form-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.search-input-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus-within {
+    border-color: #a64e26;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 20px;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+
+  &::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+}
+
+.search-button {
+  position: absolute;
+  right: 4px;
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #a64e26;
+  }
+
+  &:focus {
+    outline: 2px solid #2b4878;
+    outline-offset: -2px;
+    border-radius: 50%;
+  }
+
+  i {
+    font-size: 18px;
+  }
+}
+
+// Scope selector styles
+.scope-selector-wrapper {
+  flex-shrink: 0;
 }
 
 .scope-button {
   max-width: var(--ds-search-form-scope-max-width);
+  border-radius: 25px;
+  padding: 10px 20px;
+  background-color: var(--bs-input-bg);
+  color: var(--bs-input-color);
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #a64e26;
+    background-color: #f8f4ec;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .search-form-container {
+    max-width: 90%;
+  }
+
+  .search-input {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .search-button {
+    padding: 8px 16px;
+
+    i {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .search-form-wrapper {
+    padding: 1rem 0;
+  }
+
+  .search-input {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .search-button {
+    padding: 6px 14px;
+
+    i {
+      font-size: 14px;
+    }
+  }
 }
