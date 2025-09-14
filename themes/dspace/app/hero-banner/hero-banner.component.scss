@@ -17,7 +17,7 @@
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 600px; // Reduced height for laptop view
+  height: 600px; // Default desktop height for 1920x600 images
   overflow: hidden;
 }
 
@@ -176,15 +176,16 @@
   }
 }
 
-// Small laptops/tablets (769px to 1199px)
-@media (max-width: 1199px) and (min-width: 769px) {
+// Tablet devices (769px to 1200px) - Perfect for 1024x667 images
+@media (max-width: 1200px) and (min-width: 769px) {
   .hero-slider {
-    height: 320px; // Proportional height for smaller screens
+    height: 667px; // Perfect height for 1024x667 tablet images
+    max-height: 667px;
   }
 
   .hero-image {
     object-fit: cover; // Cover the container to fill properly
-    object-position: center top; // Position to show top and center, prevent bottom crop
+    object-position: center center; // Center the tablet image
     width: 100%;
     height: 100%;
   }
@@ -197,7 +198,7 @@
   }
 
   .hero-slider {
-    height: 250px; // Set a minimum height to ensure images show
+    height: 288px; // Perfect height for 375x288 mobile images
     width: 100%;
     margin: 0;
     padding: 0;
