@@ -181,7 +181,7 @@
       "sortField": "dc.date.accessioned"
     },
     "topLevelCommunityList": {
-      "pageSize": 10
+      "pageSize": 7
     },
     "showDiscoverFilters": false
   },

@@ -14,33 +14,33 @@
         <div class="d-none d-md-flex align-items-center me-3">
           <!-- Browse Tholkudi Dropdown -->
           <div class="dropdown me-2" ngbDropdown>
-            <button class="nav-button dropdown-toggle" type="button"
+            <button class="nav-button dropdown-toggle" type="button" 
                     id="browseDropdown" ngbDropdownToggle
-                    [attr.aria-label]="headerTranslations.navBrowseTholkudi[lang]">
-              {{ headerTranslations.navBrowseTholkudi[lang] }}
+                    [attr.aria-label]="'Browse Tholkudi'">
+              Browse Tholkudi
             </button>
             <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="browseDropdown">
-              <a class="dropdown-item" (click)="navigateToBrowse('author')">{{ headerTranslations.browseByAuthor[lang] }}</a>
-              <a class="dropdown-item" (click)="navigateToBrowse('title')">{{ headerTranslations.browseByTitle[lang] }}</a>
-              <a class="dropdown-item" (click)="navigateToBrowse('subject')">{{ headerTranslations.browseBySubject[lang] }}</a>
-              <a class="dropdown-item" (click)="navigateToBrowse('language')">{{ headerTranslations.browseByLanguage[lang] }}</a>
-              <a class="dropdown-item" (click)="navigateToBrowse('media')">{{ headerTranslations.browseByMedia[lang] }}</a>
-              <a class="dropdown-item" (click)="navigateToBrowse('linguistictype')">{{ headerTranslations.browseByLinguisticType[lang] }}</a>
+              <a class="dropdown-item" (click)="navigateToBrowse('author')">{{ 'browse.comcol.by.author' | translate }}</a>
+              <a class="dropdown-item" (click)="navigateToBrowse('title')">{{ 'browse.comcol.by.title' | translate }}</a>
+              <a class="dropdown-item" (click)="navigateToBrowse('subject')">{{ 'browse.comcol.by.subject' | translate }}</a>
+              <a class="dropdown-item" (click)="navigateToBrowse('language')">{{ 'browse.comcol.by.language' | translate }}</a>
+              <a class="dropdown-item" (click)="navigateToBrowse('media')">{{ 'browse.comcol.by.media' | translate }}</a>
+              <a class="dropdown-item" (click)="navigateToBrowse('linguistictype')">{{ 'browse.comcol.by.linguistictype' | translate }}</a>
             </div>
           </div>
 
           <!-- About us Button (simple link) -->
           <a routerLink="/about-us" class="nav-button me-2"
-             [attr.aria-label]="headerTranslations.navAbout[lang]"
+             [attr.aria-label]="'About us'"
              role="menuitem">
-            {{ headerTranslations.navAbout[lang] }}
+            About us
           </a>
 
           <!-- Tribal Languages Button (simple link) -->
           <a routerLink="/tribal_lg" class="nav-button me-2"
-             [attr.aria-label]="headerTranslations.navTribalLanguages[lang]"
+             [attr.aria-label]="'Tribal Languages'"
              role="menuitem">
-            {{ headerTranslations.navTribalLanguages[lang] }}
+            Tribal Languages
           </a>
 
           <!-- Tamil Nadu Tribes Button (simple link) -->
@@ -100,55 +100,55 @@
                     (click)="toggleMobileBrowseDropdown()"
                     [attr.aria-expanded]="isMobileBrowseOpen"
                     aria-controls="mobile-browse-dropdown">
-              {{ headerTranslations.navBrowseTholkudi[lang] }}
+              Browse Tholkudi
               <span class="dropdown-arrow" [class.rotated]="isMobileBrowseOpen">▼</span>
             </button>
             <div class="mobile-dropdown-items" 
                  id="mobile-browse-dropdown"
                  [class.show]="isMobileBrowseOpen">
               <a class="mobile-nav-link mobile-sub-link"
-                 [attr.aria-label]="headerTranslations.browseByAuthor[lang]"
+                 [attr.aria-label]="'browse.comcol.by.author' | translate"
                  (click)="navigateToBrowse('author'); closeMobileMenu()">
-                {{ headerTranslations.browseByAuthor[lang] }}
+                {{ 'browse.comcol.by.author' | translate }}
               </a>
               <a class="mobile-nav-link mobile-sub-link"
-                 [attr.aria-label]="headerTranslations.browseByTitle[lang]"
+                 [attr.aria-label]="'browse.comcol.by.title' | translate"
                  (click)="navigateToBrowse('title'); closeMobileMenu()">
-                {{ headerTranslations.browseByTitle[lang] }}
+                {{ 'browse.comcol.by.title' | translate }}
               </a>
               <a class="mobile-nav-link mobile-sub-link"
-                 [attr.aria-label]="headerTranslations.browseBySubject[lang]"
+                 [attr.aria-label]="'browse.comcol.by.subject' | translate"
                  (click)="navigateToBrowse('subject'); closeMobileMenu()">
-                {{ headerTranslations.browseBySubject[lang] }}
+                {{ 'browse.comcol.by.subject' | translate }}
               </a>
               <a class="mobile-nav-link mobile-sub-link"
-                 [attr.aria-label]="headerTranslations.browseByLanguage[lang]"
+                 [attr.aria-label]="'browse.comcol.by.language' | translate"
                  (click)="navigateToBrowse('language'); closeMobileMenu()">
-                {{ headerTranslations.browseByLanguage[lang] }}
+                {{ 'browse.comcol.by.language' | translate }}
               </a>
               <a class="mobile-nav-link mobile-sub-link"
-                 [attr.aria-label]="headerTranslations.browseByMedia[lang]"
+                 [attr.aria-label]="'browse.comcol.by.media' | translate"
                  (click)="navigateToBrowse('media'); closeMobileMenu()">
-                {{ headerTranslations.browseByMedia[lang] }}
+                {{ 'browse.comcol.by.media' | translate }}
               </a>
               <a class="mobile-nav-link mobile-sub-link"
-                 [attr.aria-label]="headerTranslations.browseByLinguisticType[lang]"
+                 [attr.aria-label]="'browse.comcol.by.linguistictype' | translate"
                  (click)="navigateToBrowse('linguistictype'); closeMobileMenu()">
-                {{ headerTranslations.browseByLinguisticType[lang] }}
+                {{ 'browse.comcol.by.linguistictype' | translate }}
               </a>
             </div>
           </div>
 
           <a routerLink="/about-us" class="mobile-nav-link"
-             [attr.aria-label]="headerTranslations.navAbout[lang]"
+             [attr.aria-label]="'About us'"
              (click)="closeMobileMenu()">
-            {{ headerTranslations.navAbout[lang] }}
+            About us
           </a>
 
           <a routerLink="/tribal_lg" class="mobile-nav-link"
-             [attr.aria-label]="headerTranslations.navTribalLanguages[lang]"
+             [attr.aria-label]="'Tribal Languages'"
              (click)="closeMobileMenu()">
-            {{ headerTranslations.navTribalLanguages[lang] }}
+            Tribal Languages
           </a>
 
           <a routerLink="/community-list" class="mobile-nav-link"

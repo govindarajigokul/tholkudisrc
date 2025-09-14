@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { ThemedLangSwitchComponent } from 'src/app/shared/lang-switch/themed-lang-switch.component';
@@ -45,71 +45,10 @@ export class HeaderComponent extends BaseComponent implements OnInit {
   // Injected services
   private router = inject(Router);
   private browseDefinitionService = inject(BrowseDefinitionDataService);
-  private translateService = inject(TranslateService);
-
-  // Current language state
-  private currentLang: 'en' | 'ta' = 'en';
-
-  // Embedded header navigation translations
-  private readonly HEADER_TRANSLATIONS = {
-    navBrowseTholkudi: {
-      en: 'Browse Tholkudi',
-      ta: 'உலவ'
-    },
-    navAbout: {
-      en: 'About',
-      ta: 'தொல்குடி பற்றி'
-    },
-    navTribalLanguages: {
-      en: 'Tribal Languages',
-      ta: 'பழங்குடிகளின் மொழிகள்'
-    },
-    browseByAuthor: {
-      en: 'By Author',
-      ta: 'ஆசிரியர்'
-    },
-    browseByTitle: {
-      en: 'By Title',
-      ta: 'நிகழ்வுகள்'
-    },
-    browseBySubject: {
-      en: 'By Subject',
-      ta: 'பொருள் வாரியாக'
-    },
-    browseByLanguage: {
-      en: 'By Language',
-      ta: 'மொழி'
-    },
-    browseByMedia: {
-      en: 'By Media',
-      ta: 'காணொலி காட்சி & ஒலிக் கோப்புகள்'
-    },
-    browseByLinguisticType: {
-      en: 'By Linguistic Type',
-      ta: 'மொழியியல் வகை மூலம்'
-    }
-  };
 
   ngOnInit() {
     super.ngOnInit();
     this.isNavBarCollapsed$ = this.menuService.isMenuCollapsed(this.menuID);
-
-    // Initialize current language and subscribe to language changes
-    this.currentLang = (this.translateService.currentLang === 'ta') ? 'ta' : 'en';
-
-    this.translateService.onLangChange.subscribe(langEvent => {
-      this.currentLang = (langEvent.lang === 'ta') ? 'ta' : 'en';
-    });
-  }
-
-  // Getter for header translations
-  get headerTranslations() {
-    return this.HEADER_TRANSLATIONS;
-  }
-
-  // Getter for current language
-  get lang(): 'en' | 'ta' {
-    return this.currentLang;
   }
 
   /**
