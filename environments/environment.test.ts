@@ -317,9 +317,6 @@ export const environment: BuildConfig = {
     video: true,
   },
   info: {
-    enableAboutStatement: true,
-    enableCreditsStatement: true,
-    enableHelpStatement: true,
     enableEndUserAgreement: true,
     enablePrivacyStatement: true,
     enableCOARNotifySupport: true,

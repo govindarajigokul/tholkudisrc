@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { ActivatedRouteStub } from '../../../shared/testing/active-router.stub';
-import { TribalLgContentComponent } from './tribal_lg-content.component';
+import { TribalLgContentComponent } from './about-content.component';
 
 describe('TribalLgContentComponent', () => {
   let component: TribalLgContentComponent;

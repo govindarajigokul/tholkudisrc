@@ -7,9 +7,9 @@
            routerLink="/home"
            [attr.aria-label]="'home.title' | translate">
           <img
-            [src]="currentLogo?.src || 'assets/images/tholkudi-logo-english.png'"
+            src="assets/images/tholkudi-logo-english.png"
             class="footer-logo"
-            [attr.alt]="currentLogo?.alt || ('menu.header.image.logo' | translate)" />
+            [attr.alt]="'menu.header.image.logo' | translate" />
         </a>
       </div>
 
@@ -77,19 +77,6 @@
             </a>
           </li>
         </ul>
-
-        <!-- Social Media Icons -->
-        <div class="social-media-icons mt-3">
-          <a href="#" aria-label="Facebook" class="social-icon">
-            <img src="assets/tholkudi-assets/social-media-icons/black_facebook.svg" alt="Facebook" />
-          </a>
-          <a href="#" aria-label="X (Twitter)" class="social-icon">
-            <img src="assets/tholkudi-assets/social-media-icons/black_x.svg" alt="X (Twitter)" />
-          </a>
-          <a href="#" aria-label="YouTube" class="social-icon">
-            <img src="assets/tholkudi-assets/social-media-icons/black_youtube.svg" alt="YouTube" />
-          </a>
-        </div>
       </div>
     </div>
   </div>
